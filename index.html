@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CIAT Academy | Empowering Africa's Next Tech Leaders</title>
+  <meta name="description" content="CIAT Academy offers hands-on training in Digital Marketing, Software Development, Creative Content, and Tech Entrepreneurship. Launch your tech career in 6 months.">
+  <meta name="keywords" content="CIAT Academy, tech training, software development, digital marketing, creative content, entrepreneurship, Africa tech school">
+  <meta name="author" content="CIAT Academy">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    :root {
+      --primary-orange: #F37021;
+      --primary-blue: #0E2242;
+      --light-gray: #F5F5F5;
+      --white: #FFFFFF;
+    }
+    * {margin:0;padding:0;box-sizing:border-box;}
+    body {font-family:'Poppins',sans-serif;line-height:1.6;color:var(--primary-blue);background:var(--white);scroll-behavior:smooth;}
+    header {position:sticky;top:0;background:var(--white);display:flex;justify-content:space-between;align-items:center;padding:1rem 2rem;border-bottom:1px solid #ddd;z-index:1000;}
+    header h1 {font-size:1.2rem;font-weight:700;color:var(--primary-orange);}
+    nav {display:flex;gap:1rem;}
+    nav a {text-decoration:none;color:var(--primary-blue);font-weight:600;}
+    .cta-btn {background:var(--primary-orange);color:var(--white);padding:0.5rem 1rem;border-radius:25px;text-decoration:none;font-weight:bold;transition:0.3s;}
+    .cta-btn:hover {background:#ff8b3f;}
+    .menu-toggle {display:none;font-size:1.5rem;cursor:pointer;}
+    @media (max-width:768px){
+      nav{display:none;flex-direction:column;background:var(--white);position:absolute;top:60px;right:0;width:200px;border:1px solid #ddd;}
+      nav.active{display:flex;}
+      .menu-toggle{display:block;}
+    }
+    /* Hero */
+    .hero {display:flex;flex-wrap:wrap;align-items:center;padding:2rem;background:linear-gradient(to right,var(--primary-orange),var(--primary-blue));color:var(--white);}
+    .hero-text {flex:1;min-width:300px;}
+    .hero h2 {font-size:2rem;font-weight:700;margin-bottom:1rem;}
+    .hero p {font-size:1.1rem;margin-bottom:1rem;}
+    .countdown {font-size:1.5rem;margin:1rem 0;}
+    .hero img {flex:1;max-width:400px;width:100%;}
+    /* Sections */
+    section {padding:3rem 2rem;}
+    section h3 {text-align:center;margin-bottom:2rem;font-size:1.8rem;color:var(--primary-blue);}
+    /* Features */
+    .features,.programs,.steps,.testimonials {display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.5rem;}
+    .feature,.step,.testimonial {background:var(--light-gray);padding:1.5rem;text-align:center;border-radius:10px;transition:0.3s;}
+    .feature:hover,.step:hover,.testimonial:hover {transform:translateY(-5px);}
+    .feature i,.step i {font-size:2rem;color:var(--primary-orange);margin-bottom:0.5rem;}
+    /* Programs */
+    .program {background:var(--white);border:2px solid var(--primary-orange);padding:1rem;text-align:center;border-radius:10px;cursor:pointer;transition:0.3s;}
+    .program:hover {background:var(--primary-orange);color:var(--white);}
+    /* Modal */
+    .modal {display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.7);justify-content:center;align-items:center;}
+    .modal-content {background:var(--white);padding:2rem;border-radius:10px;max-width:500px;text-align:center;position:relative;}
+    .close {position:absolute;top:10px;right:15px;font-size:1.5rem;cursor:pointer;color:var(--primary-orange);}
+    /* Testimonials */
+    .testimonial {border-left:5px solid var(--primary-orange);}
+    /* Admission form */
+    form {max-width:500px;margin:auto;background:var(--light-gray);padding:1.5rem;border-radius:10px;}
+    form input,form textarea {width:100%;padding:0.7rem;margin:0.5rem 0;border:1px solid #ccc;border-radius:5px;}
+    form button {background:var(--primary-orange);color:var(--white);padding:0.7rem;border:none;border-radius:5px;cursor:pointer;width:100%;}
+    /* Footer */
+    footer {background:var(--primary-blue);color:var(--white);padding:2rem;text-align:center;}
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>CIAT Academy</h1>
+  <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#why">Why Join</a>
+    <a href="#programs">Programs</a>
+    <a href="#how">How It Works</a>
+    <a href="#about">About</a>
+    <a href="#testimonials">Testimonials</a>
+    <a href="#admission">Admission</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <a href="#admission" class="cta-btn">Apply Now</a>
+</header>
+
+<section id="home" class="hero">
+  <div class="hero-text">
+    <h2>Launch Your Digital Career in 6 Months</h2>
+    <p>Cohort-based training in Digital Marketing, Software Development, Creative Content & Tech Entrepreneurship.</p>
+    <div class="countdown" id="countdown"></div>
+    <a href="#admission" class="cta-btn">Join the Next Cohort</a>
+  </div>
+  <img src="https://undraw.co/api/illustrations/undraw_programming_re_kg9v.svg" alt="Tech Learning Illustration">
+</section>
+
+<section id="why">
+  <h3>Why CIAT Academy?</h3>
+  <div class="features">
+    <div class="feature"><i class="fas fa-laptop-code"></i><h4>Industry-Relevant Skills</h4><p>Learn tools that employers want.</p></div>
+    <div class="feature"><i class="fas fa-project-diagram"></i><h4>Hands-on Projects</h4><p>Work on real-world tech problems.</p></div>
+    <div class="feature"><i class="fas fa-chalkboard-teacher"></i><h4>Expert Mentors</h4><p>Learn from experienced professionals.</p></div>
+    <div class="feature"><i class="fas fa-globe"></i><h4>Global Opportunities</h4><p>Skills to compete internationally.</p></div>
+  </div>
+</section>
+
+<section id="programs">
+  <h3>Our Programs</h3>
+  <div class="programs">
+    <div class="program" data-program="dm">Digital Marketing</div>
+    <div class="program" data-program="sd">Software Development</div>
+    <div class="program" data-program="cc">Creative Content Production</div>
+    <div class="program" data-program="te">Tech Entrepreneurship</div>
+  </div>
+</section>
+
+<section id="how">
+  <h3>How It Works</h3>
+  <div class="steps">
+    <div class="step"><i class="fas fa-user-plus"></i><h4>Apply Online</h4><p>Submit your application through our website.</p></div>
+    <div class="step"><i class="fas fa-video"></i><h4>Attend Interview</h4><p>Have a short session with our admissions team.</p></div>
+    <div class="step"><i class="fas fa-graduation-cap"></i><h4>Start Learning</h4><p>Begin your training with mentors and peers.</p></div>
+  </div>
+</section>
+
+<section id="about">
+  <h3>About CIAT Academy</h3>
+  <p style="max-width:800px;margin:auto;text-align:center;">CIAT Academy is committed to equipping young Africans with practical digital skills to thrive in the global economy. We combine expert-led classes, real-world projects, and personalized mentorship to help our students launch successful careers and ventures.</p>
+</section>
+
+<section id="testimonials">
+  <h3>Testimonials</h3>
+  <div class="testimonials">
+    <div class="testimonial"><p>"CIAT gave me the confidence and skills to land my first tech job!"</p><strong>- Grace, Software Developer</strong></div>
+    <div class="testimonial"><p>"The hands-on projects were amazing. I launched my own business!"</p><strong>- Daniel, Entrepreneur</strong></div>
+  </div>
+</section>
+
+<section id="admission">
+  <h3>Admission</h3>
+  <form>
+    <input type="text" placeholder="Full Name" required>
+    <input type="email" placeholder="Email Address" required>
+    <input type="tel" placeholder="Phone Number" required>
+    <textarea placeholder="Tell us about yourself" rows="4"></textarea>
+    <button type="submit">Submit Application</button>
+  </form>
+</section>
+
+<section id="contact">
+  <h3>Contact Us</h3>
+  <p style="text-align:center;">Email: info@ciatacademy.com | Phone: +123 456 7890</p>
+</section>
+
+<div class="modal" id="programModal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h4 id="modalTitle"></h4>
+    <p id="modalDesc"></p>
+  </div>
+</div>
+
+<footer>
+  <p>© 2025 CIAT Academy. All Rights Reserved.</p>
+</footer>
+
+<script>
+  // Mobile menu toggle
+  const menuToggle=document.querySelector('.menu-toggle');
+  const nav=document.querySelector('nav');
+  menuToggle.addEventListener('click',()=>nav.classList.toggle('active'));
+
+  // Countdown Timer
+  const countdownEl=document.getElementById('countdown');
+  const nextCohortDate=new Date("August 24, 2025 00:00:00");
+  function updateCountdown(){
+    const now=new Date();
+    const diff=nextCohortDate-now;
+    if(diff<=0){countdownEl.innerHTML="Enrollment Closed";return;}
+    const days=Math.floor(diff/(1000*60*60*24));
+    const hours=Math.floor((diff/(1000*60*60))%24);
+    const minutes=Math.floor((diff/(1000*60))%60);
+    const seconds=Math.floor((diff/1000)%60);
+    countdownEl.innerHTML=`${days}d ${hours}h ${minutes}m ${seconds}s until next cohort`;
+  }
+  setInterval(updateCountdown,1000);
+
+  // Program Modal
+  const programs={
+    dm:{title:"Digital Marketing",desc:"Learn SEO, social media marketing, content creation, and analytics."},
+    sd:{title:"Software Development",desc:"Master full-stack development with hands-on coding projects."},
+    cc:{title:"Creative Content Production",desc:"Produce high-quality multimedia content for various platforms."},
+    te:{title:"Tech Entrepreneurship",desc:"Build and launch your own tech startup from scratch."}
+  };
+  const programEls=document.querySelectorAll('.program');
+  const modal=document.getElementById('programModal');
+  const modalTitle=document.getElementById('modalTitle');
+  const modalDesc=document.getElementById('modalDesc');
+  const closeModal=document.querySelector('.close');
+  programEls.forEach(el=>{
+    el.addEventListener('click',()=>{
+      const p=programs[el.dataset.program];
+      modalTitle.textContent=p.title;
+      modalDesc.textContent=p.desc;
+      modal.style.display='flex';
+    });
+  });
+  closeModal.addEventListener('click',()=>modal.style.display='none');
+  window.addEventListener('click',e=>{if(e.target==modal)modal.style.display='none';});
+  updateCountdown();
+</script>
+
+</body>
+</html>
